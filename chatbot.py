@@ -1,0 +1,62 @@
+from openai import OpenAI
+from config import (
+    OPENAI_API_KEY,
+    CHAT_MODEL,
+    TRANSCRIPTION_MODEL,
+    TTS_MODEL,
+    TTS_VOICE,
+    SYSTEM_PROMPT,
+    MAX_MEMORY_MESSAGES
+)
+
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+conversation_history = [
+    {"role": "system", "content": SYSTEM_PROMPT}
+]
+
+
+def transcribe_audio(filename):
+    with open(filename, "rb") as audio_file:
+        transcript = client.audio.transcriptions.create(
+            model=TRANSCRIPTION_MODEL,
+            file=audio_file
+        )
+    return transcript.text.strip()
+
+
+def get_chat_response(user_text):
+    conversation_history.append({"role": "user", "content": user_text})
+
+    response = client.chat.completions.create(
+        model=CHAT_MODEL,
+        messages=conversation_history,
+        temperature=0.7,
+        max_tokens=200
+    )
+
+    reply = response.choices[0].message.content.strip()
+    conversation_history.append({"role": "assistant", "content": reply})
+
+    trim_memory()
+    return reply
+
+
+def trim_memory():
+    if len(conversation_history) > MAX_MEMORY_MESSAGES + 1:
+        system = conversation_history[0]
+        recent = conversation_history[-MAX_MEMORY_MESSAGES:]
+        conversation_history.clear()
+        conversation_history.append(system)
+        conversation_history.extend(recent)
+
+
+def generate_speech(text, filename):
+    speech = client.audio.speech.create(
+        model=TTS_MODEL,
+        voice=TTS_VOICE,
+        input=text
+    )
+
+    with open(filename, "wb") as f:
+        f.write(speech.read())

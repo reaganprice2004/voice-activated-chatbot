@@ -1,0 +1,17 @@
+# Ignore environment variables (API keys)
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore generated audio files
+generated_audio/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environments (if you make one later)
+venv/
+.env/

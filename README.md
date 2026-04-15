@@ -24,7 +24,7 @@ This project implements a voice-activated chatbot that processes spoken input an
 ---
 
 ## 🗂️ Project Structure
-
+```
 voice_chatbot_project/
 │
 ├── app.py # Main program loop
@@ -35,7 +35,7 @@ voice_chatbot_project/
 ├── .env # API key (not included in repo)
 ├── README.md
 └── generated_audio/ # Output audio files (ignored)
-
+```
 ---
 
 ## 🚀 How to Run

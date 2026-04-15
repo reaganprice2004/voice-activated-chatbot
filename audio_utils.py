@@ -25,9 +25,14 @@ def record_audio(filename, seconds):
 
 
 def play_audio(filename):
-    pygame.mixer.init()
+    if not pygame.mixer.get_init():
+        pygame.mixer.init()
+
     pygame.mixer.music.load(filename)
     pygame.mixer.music.play()
 
     while pygame.mixer.music.get_busy():
         time.sleep(0.1)
+
+    pygame.mixer.music.stop()
+    pygame.mixer.music.unload()

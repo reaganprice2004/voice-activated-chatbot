@@ -1,3 +1,4 @@
+import os
 from openai import OpenAI
 from config import (
     OPENAI_API_KEY,
@@ -52,6 +53,9 @@ def trim_memory():
 
 
 def generate_speech(text, filename):
+    if os.path.exists(filename):
+        os.remove(filename)
+
     speech = client.audio.speech.create(
         model=TTS_MODEL,
         voice=TTS_VOICE,

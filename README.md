@@ -91,4 +91,6 @@ This project demonstrates an end-to-end NLP system combining:
 ---
 
 ## 📸 Screenshots
-Screenshots of full voice interaction will be added after testing in an appropriate environment.
+Screenshots of full voice interaction shown below, with both input from speech from user and output from bot demonstrated fully.
+<img width="1343" height="557" alt="Screenshot 2026-04-14 213500" src="https://github.com/user-attachments/assets/ef81f2d9-fcf2-4a20-bdea-96f305c0b894" />
+

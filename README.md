@@ -1,4 +1,4 @@
-# 🎤 Voice-Activated Chatbot
+# 🎤 Voice Activated Chatbot
 
 **Course:** CSC 433: Natural Language Processing
 

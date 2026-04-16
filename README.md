@@ -1,25 +1,44 @@
 # 🎤 Voice Chatbot NLP Project
 
-## 📌 Overview
-This project implements a voice-activated chatbot that processes spoken input and returns a spoken response. It demonstrates a complete natural language processing (NLP) pipeline, including speech recognition, language modeling, and speech synthesis.
+**Course:** CSC 433: Natural Language Processing
+**Timeline:** February 2026-April 2026
 
 ---
 
-## ⚙️ Features
-- 🎤 Speech-to-text (microphone input)
-- 🤖 GPT-based chatbot responses
-- 🔊 Text-to-speech output
-- 🧠 Short-term conversation memory
-- 🔄 End-to-end voice interaction pipeline
+## 🗺️ Overview
+This project implements a **voice-activated chatbot** that processes spoken input and generates spoken responses. It demonstrates a complete NLP pipeline integrating:
+- Speech recognition
+- Language modeling
+- Speech synthesis  
+
+The system enables real-time voice interaction between a user and an AI model.
 
 ---
 
-## 🧠 System Pipeline
+## 🎯 Project Objectives
+- Build an end-to-end voice interaction system  
+- Convert speech input into text using ASR  
+- Generate responses using a GPT-based model  
+- Convert responses back into speech using TTS  
+- Demonstrate a fully integrated NLP pipeline  
+
+---
+
+## 🧹 System Pipeline
 1. Record user speech from microphone  
 2. Convert speech to text (ASR)  
 3. Generate response using GPT model  
 4. Convert response to speech (TTS)  
 5. Play response audio  
+
+---
+
+## ⚙️ Features
+- Speech-to-text (microphone input)  
+- GPT-based chatbot responses  
+- Text-to-speech output  
+- Short-term conversation memory  
+- End-to-end voice interaction pipeline  
 
 ---
 

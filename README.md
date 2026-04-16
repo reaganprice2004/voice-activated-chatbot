@@ -1,6 +1,7 @@
 # 🎤 Voice Chatbot NLP Project
 
 **Course:** CSC 433: Natural Language Processing
+
 **Timeline:** February 2026-April 2026
 
 ---

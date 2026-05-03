@@ -1,5 +1,6 @@
 import os
 import time
+import sys
 from config import (
     RECORD_SECONDS,
     GENERATED_AUDIO_FOLDER,
@@ -8,6 +9,30 @@ from config import (
 from audio_utils import ensure_audio_folder_exists, record_audio, play_audio
 from chatbot import transcribe_audio, get_chat_response, generate_speech
 
+def launch_interface():
+    import gradio as gr
+
+    ensure_audio_folder_exists(GENERATED_AUDIO_FOLDER)
+
+    def chat_interface(user_text):
+        if not user_text.strip():
+            return "Please enter a message."
+
+        bot_reply = get_chat_response(user_text)
+        return bot_reply
+
+    demo = gr.Interface(
+        fn=chat_interface,
+        inputs=gr.Textbox(label="Type your message"),
+        outputs=gr.Textbox(label="Chatbot response"),
+        title="Voice-Activated Chatbot",
+        description=(
+            "A simple NLP final project chatbot with safety and privacy guardrails. "
+            "Do not enter passwords, API keys, addresses, or financial information."
+        )
+    )
+
+    demo.launch()
 
 def main():
     print("Inside main()")
@@ -52,4 +77,8 @@ def main():
 
 if __name__ == "__main__":
     print("app.py started")
-    main()
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--ui":
+        launch_interface()
+    else:
+        main()

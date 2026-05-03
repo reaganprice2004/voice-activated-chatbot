@@ -1,25 +1,45 @@
-# 🎤 Voice Chatbot NLP Project
+# 🎤 Voice Activated Chatbot
 
-## 📌 Overview
-This project implements a voice-activated chatbot that processes spoken input and returns a spoken response. It demonstrates a complete natural language processing (NLP) pipeline, including speech recognition, language modeling, and speech synthesis.
+**Course:** CSC 433: Natural Language Processing
 
----
-
-## ⚙️ Features
-- 🎤 Speech-to-text (microphone input)
-- 🤖 GPT-based chatbot responses
-- 🔊 Text-to-speech output
-- 🧠 Short-term conversation memory
-- 🔄 End-to-end voice interaction pipeline
+**Timeline:** February 2026-April 2026
 
 ---
 
-## 🧠 System Pipeline
+## 🗺️ Overview
+This project implements a **voice-activated chatbot** that processes spoken input and generates spoken responses. It demonstrates a complete NLP pipeline integrating:
+- Speech recognition
+- Language modeling
+- Speech synthesis  
+
+The system enables real-time voice interaction between a user and an AI model.
+
+---
+
+## 🎯 Project Objectives
+- Build an end-to-end voice interaction system  
+- Convert speech input into text using ASR  
+- Generate responses using a GPT-based model  
+- Convert responses back into speech using TTS  
+- Demonstrate a fully integrated NLP pipeline  
+
+---
+
+## 🧹 System Pipeline
 1. Record user speech from microphone  
 2. Convert speech to text (ASR)  
 3. Generate response using GPT model  
 4. Convert response to speech (TTS)  
 5. Play response audio  
+
+---
+
+## ⚙️ Features
+- Speech-to-text (microphone input)  
+- GPT-based chatbot responses  
+- Text-to-speech output  
+- Short-term conversation memory  
+- End-to-end voice interaction pipeline  
 
 ---
 
@@ -91,4 +111,7 @@ This project demonstrates an end-to-end NLP system combining:
 ---
 
 ## 📸 Screenshots
-Screenshots of full voice interaction will be added after testing in an appropriate environment.
+Screenshots of full voice interaction shown below, with both input from speech from user and output from bot demonstrated fully.
+<img width="1343" height="557" alt="Screenshot 2026-04-14 213500" src="https://github.com/user-attachments/assets/ef81f2d9-fcf2-4a20-bdea-96f305c0b894" />
+<img width="1341" height="372" alt="Screenshot 2026-04-14 213805" src="https://github.com/user-attachments/assets/86d7c661-1a98-4afe-9348-26980c2613a8" />
+

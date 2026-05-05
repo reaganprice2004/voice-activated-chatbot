@@ -40,6 +40,10 @@ The system enables real-time voice interaction between a user and an AI model.
 - Text-to-speech output  
 - Short-term conversation memory  
 - End-to-end voice interaction pipeline  
+- System prompt for controlled and concise responses  
+- Basic safety and privacy guardrails  
+- Multilingual input support  
+- Optional browser-based user interface (Gradio)    
 
 ---
 
@@ -70,12 +74,20 @@ Create a `.env` file:
 ### 3. Run the chatbot
 `python app.py`
 
+### 4. Run with browser interface (optional)
+`python app.py --ui`
+
+This launches a simple web interface using Gradio.  
+Open the provided local URL (typically http://127.0.0.1:7860) in your browser.
+
 ---
 
 ## 🧪 Current Status
 - Core functionality is complete  
-- Voice input → response → audio output is working  
-- Further improvements will focus on usability and performance  
+- Voice input → response → audio output is working    
+- Safety and privacy guardrails are implemented  
+- Optional user interface has been added  
+- Further improvements will focus on usability and performance    
 
 ---
 
@@ -87,10 +99,29 @@ Create a `.env` file:
 ---
 
 ## 🔮 Future Improvements
-- Improved user interaction (UI/UX)
-- Better response control and formatting
-- Latency measurement and optimization
-- Optional GUI interface
+- Full voice input/output support in the web interface  
+- Real-time voice activity detection (instead of fixed recording time)  
+- More advanced safety filtering and moderation  
+- Improved conversation memory (long-term context)  
+- Deployment to a public platform (e.g., Hugging Face Spaces)  
+- Reduced latency and faster response times  
+
+---
+
+## 🔒 Safety & System Behavior
+The chatbot includes basic safety and privacy guardrails to prevent misuse and protect user data.
+
+- The system prompt guides the chatbot to remain helpful, concise, and safe
+- The chatbot avoids handling sensitive personal information such as:
+  - Passwords
+  - API keys
+  - Social Security numbers
+  - Credit card or banking information
+  - Home addresses
+- Harmful, unsafe, or illegal requests are not fulfilled
+- For medical, legal, or financial topics, the chatbot provides general guidance only
+
+These safeguards are implemented using both prompt design and simple input filtering.
 
 ---
 
@@ -99,6 +130,7 @@ Create a `.env` file:
 - OpenAI API
 - SoundDevice (audio input)
 - Pygame (audio output)
+- Gradio (user interface)
 
 ---
 

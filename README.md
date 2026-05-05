@@ -7,7 +7,7 @@
 ---
 
 ## 🗺️ Overview
-This project implements a **voice-activated chatbot** that processes spoken input and generates spoken responses. It demonstrates a complete NLP pipeline integrating:
+This project implements a **voice chatbot** that processes spoken input and generates spoken responses. It demonstrates a complete NLP pipeline integrating:
 - Speech recognition
 - Language modeling
 - Speech synthesis  
@@ -26,11 +26,11 @@ The system enables real-time voice interaction between a user and an AI model.
 ---
 
 ## 🧹 System Pipeline
-1. Record user speech from microphone  
+1. Record user speech from the microphone  
 2. Convert speech to text (ASR)  
 3. Generate response using GPT model  
 4. Convert response to speech (TTS)  
-5. Play response audio  
+5. Play the response audio  
 
 ---
 
@@ -112,7 +112,7 @@ Open the provided local URL (typically http://127.0.0.1:7860) in your browser.
 The chatbot includes basic safety and privacy guardrails to prevent misuse and protect user data.
 
 - The system prompt guides the chatbot to remain helpful, concise, and safe
-- The chatbot avoids handling sensitive personal information such as:
+- The chatbot avoids handling sensitive personal information, such as:
   - Passwords
   - API keys
   - Social Security numbers
@@ -143,7 +143,7 @@ This project demonstrates an end-to-end NLP system combining:
 ---
 
 ## 📸 Screenshots
-Screenshots of full voice interaction shown below, with both input from speech from user and output from bot demonstrated fully.
+Screenshots of full voice interaction are shown below, with both input from speech from user and output from bot demonstrated fully.
 <img width="1343" height="557" alt="Screenshot 2026-04-14 213500" src="https://github.com/user-attachments/assets/ef81f2d9-fcf2-4a20-bdea-96f305c0b894" />
 <img width="1341" height="372" alt="Screenshot 2026-04-14 213805" src="https://github.com/user-attachments/assets/86d7c661-1a98-4afe-9348-26980c2613a8" />
 
